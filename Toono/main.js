@@ -1,6 +1,9 @@
 import './style.css'
 import * as THREE from 'three'
 
+import { Bagana } from './component/bagana.js';
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer();
@@ -28,9 +31,25 @@ camera.position.y = 3;
 camera.position.x = 0;
 
 
+//bagana
+// Assuming Bagana is already defined as a mesh or object
+
+// Create copies of Bagana
+const bagana1 = Bagana.clone();
+const bagana2 = Bagana.clone();
+
+// Optionally, position each bagana
+bagana1.position.set(0, 0, 0); // Example position for the first bagana
+bagana2.position.set(2, 0, 0); // Example position for the second bagana
+
+// Add both instances to the scene
+scene.add(bagana1, bagana2);
 
 
 
+
+
+/*
 const shape = new THREE.Shape();
 shape.moveTo(-1.5, 2.5);
 shape.bezierCurveTo(-1.5, 2.5, 1.5, 2, 2.5, 0.5);
@@ -95,7 +114,7 @@ scene.add(toonoMesh);
 
 
 
-
+*/
 
 function animate() {
     requestAnimationFrame(animate);
