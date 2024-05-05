@@ -87,7 +87,7 @@ const extrudeSettings = {
 };
 
 const geometry = new THREE.ExtrudeGeometry(BaganaShape, extrudeSettings);
-const material = new THREE.MeshBasicMaterial({ color: 0xDD5746 });
+const material = new THREE.MeshBasicMaterial({ color: 0xF97300 });
 const meshBagana = new THREE.Mesh(geometry, material);
 meshBagana.scale.set(0.5, 0.5, 0.5); 
 meshBagana.position.y = 5;
@@ -97,7 +97,7 @@ meshBagana.rotateY(Math.PI/2);
 
 
 const geometryhol = new THREE.BoxGeometry(0.5,1,13);
-const materialhol = new THREE.MeshBasicMaterial({ color: 0xDD5746 }); 
+const materialhol = new THREE.MeshBasicMaterial({ color: 0xF97300 }); 
 const baganaHul = new THREE.Mesh(geometryhol, materialhol);
 baganaHul.position.x = 0;
 baganaHul.rotateX(Math.PI/2);

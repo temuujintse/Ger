@@ -31,18 +31,13 @@ camera.position.y = 3;
 camera.position.x = 0;
 
 
-//bagana
-// Assuming Bagana is already defined as a mesh or object
 
-// Create copies of Bagana
+//bagana
 const bagana1 = Bagana.clone();
 const bagana2 = Bagana.clone();
 
-// Optionally, position each bagana
-bagana1.position.set(0, 0, 0); // Example position for the first bagana
-bagana2.position.set(2, 0, 0); // Example position for the second bagana
-
-// Add both instances to the scene
+bagana1.position.set(-5, 0, 0); 
+bagana2.position.set(5, 0, 0);
 scene.add(bagana1, bagana2);
 
 
