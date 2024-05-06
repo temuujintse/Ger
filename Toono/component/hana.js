@@ -78,29 +78,30 @@ const createCircleRow = (numCubes, radius, rowColor) => {
         row.add(instance);
     }
 
-    let sign = 1;
 
     for (let i = 0; i < numCubes - 3; i++) {
-        const angle = (i / numCubes) * Math.PI * 2;
-        const x = Math.cos(angle) * radius;
-        const y = Math.sin(angle) * radius;
-        const rotation = Math.atan2(y, x);
 
-        const instance = baiguulagch();
-        instance.position.set(x, y, 1.95);
-        instance.rotation.z = rotation - Math.PI / 2;
-        row.add(instance);
+      const angle = (i / numCubes) * Math.PI * 2;
+      const x = Math.cos(angle) * radius;
+      const y = Math.sin(angle) * radius;
+      const rotation = Math.atan2(y, x);
 
-    const u = uni();
-    u.scale.set(0.2, 0.21, 0.2);
-    u.rotateZ(0 - Math.PI/2 + angle);
-    u.rotateX(-Math.PI / 5.5)
-    u.position.set(x/1.35,y/1.35,3.2);
-    row.add(u);
+      const instance = baiguulagch();
+      instance.position.set(x, y, 1.95);
+      instance.rotation.z = rotation - Math.PI / 2;
+      row.add(instance);
+
+      const u = uni();
+      u.scale.set(0.2, 0.21, 0.2);
+      u.rotateZ(0 - Math.PI/2 + angle);
+      u.rotateX(-Math.PI / 5.5)
+      u.position.set(x/1.35,y/1.35,3.2);
+      row.add(u);
+
     }
     
 
-    return row;
+  return row;
 };
 
 

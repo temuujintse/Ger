@@ -6,6 +6,7 @@ import {haalga} from './component/haalga.js'
 import {shal} from './component/shal.js'
 import './style.css'
 import { Bagana } from './component/bagana.js';
+import { bvrees } from './component/bvrees.js';
 
 
 const scene = new THREE.Scene();
@@ -32,11 +33,11 @@ scene.add(ambientLight);
 const axesHelper = new THREE.AxesHelper( 5 );
 scene.add( axesHelper );
 
-const size = 100;
-const divisions = 100;
-const gridHelper = new THREE.GridHelper( size, divisions );
-gridHelper.rotateX(Math.PI/2)
-scene.add( gridHelper );
+// const size = 100;
+// const divisions = 100;
+// const gridHelper = new THREE.GridHelper( size, divisions );
+// gridHelper.rotateX(Math.PI/2)
+// scene.add( gridHelper );
 
 // --> start components
 
@@ -80,6 +81,9 @@ h1.scale.set(0.35, 0.3, 0.2);
 h1.position.set(-0.05, -5, 0);
 haalgaGroup.position.set(-0.9, -5, 0);
 scene.add(haalgaGroup, h1);
+
+const b = bvrees();
+scene.add(b);
 
 // <-- end components
 
