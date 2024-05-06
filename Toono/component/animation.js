@@ -24,6 +24,8 @@ const gridHelper = new THREE.GridHelper( size, divisions );
 gridHelper.rotateX(Math.PI/2)
 scene.add( gridHelper );
 
+
+
 const keyboard = {};
 document.addEventListener("keydown", (event) => {
   keyboard[event.key] = true;

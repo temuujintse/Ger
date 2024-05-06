@@ -21,9 +21,9 @@ const rings = (outerR, innerR) => {
 
     // Create the outerColumn mesh
     const outerColumnMesh = new THREE.Mesh(outerColumnGeometry, outerColumnMaterial);
-    outerColumnMesh.rotation.x = Math.PI / 2; // Rotate it to be perpendicular to the ger
-    outerColumnMesh.position.y = 1.5; // Position it at the top of the ger
-    outerColumnMesh.position.x = -4; // Position it at the top of the ger
+    outerColumnMesh.rotation.x = Math.PI / 2; 
+    outerColumnMesh.position.y = 1.5; 
+    outerColumnMesh.position.x = -4; 
 
     outerColumnMesh.rotateX(Math.PI/2);
     
